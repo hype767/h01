@@ -9,12 +9,12 @@ header{text-align:center;padding:56px 16px 24px}
 h1{font-size:clamp(28px,6vw,46px);margin:0 0 8px}header p{color:var(--mute);margin:0;font-size:18px}
 .tl{position:relative;max-width:860px;margin:0 auto;padding:16px 16px 80px}
 .tl:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;background:linear-gradient(var(--line),var(--leaf));transform:translateX(-50%);border-radius:3px}
-.item{position:relative;display:flex;align-items:center;gap:28px;margin:44px 0;opacity:0;transform:translateY(30px);transition:.8s}
+.item{position:relative;display:flex;align-items:center;gap:64px;margin:44px 0;opacity:0;transform:translateY(30px);transition:.8s}
 .item.show{opacity:1;transform:none}
 .item:nth-child(even){flex-direction:row-reverse}
 .item:before{content:"";position:absolute;left:50%;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--line);transform:translateX(-50%)}
-.card,.art{width:calc(50% - 30px)}
-.art svg{width:100%;max-width:200px;display:block;margin:auto;overflow:visible}
+.card,.art{width:calc(50% - 40px);position:relative;z-index:1}.card{padding:6px 4px}.item:nth-child(even) .card{text-align:right}.item:nth-child(odd) .card{text-align:left}
+.art svg{width:100%;max-width:200px;display:block;margin:auto;overflow:hidden;padding:6px}
 .art path,.art rect,.art circle,.art line,.art ellipse{fill:none;stroke:var(--line);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
 .show .art *{animation:draw 2.4s ease forwards}
 .show .art :nth-child(2){animation-delay:.3s}.show .art :nth-child(3){animation-delay:.6s}.show .art :nth-child(4){animation-delay:.9s}.show .art :nth-child(5){animation-delay:1.2s}
@@ -23,7 +23,7 @@ h1{font-size:clamp(28px,6vw,46px);margin:0 0 8px}header p{color:var(--mute);marg
 .card h2{margin:0;font-size:22px}.card p{margin:4px 0 0;color:var(--mute);font-size:16px}
 .leaf{display:inline-block;animation:sway 3s ease-in-out infinite;transform-origin:bottom}
 @keyframes sway{50%{transform:rotate(12deg)}}
-@media(max-width:600px){.tl:before{left:14px}.item,.item:nth-child(even){flex-direction:column;align-items:flex-start;padding-left:40px}.item:before{left:14px}.card,.art{width:100%}.art svg{margin:0;max-width:150px}}
+@media(max-width:600px){.tl:before{left:14px}.item,.item:nth-child(even){gap:8px}.item:nth-child(even) .card{text-align:left}.item,.item:nth-child(even){flex-direction:column;align-items:flex-start;padding-left:44px}.item:before{left:14px}.card,.art{width:100%}.art svg{margin:0;max-width:150px}}
 @media(prefers-reduced-motion:reduce){.art *{animation:none!important;stroke-dashoffset:0}.item{opacity:1;transform:none}}
 </style></head><body>
 <header><h1><span class="leaf">🌿</span> 들고 다니는 기기 이야기</h1><p>손바닥 위 세상이 자라온 70년 · 스크롤해서 만나보세요</p></header>
